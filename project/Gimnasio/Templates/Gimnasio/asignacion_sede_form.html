@@ -1,6 +1,7 @@
 {% extends 'Gimnasio/base.html' %}
 
 {% block contenido %}
+    <h1>Asignación Sede-Miembros</h1>
     <form  method="post">
         {% csrf_token %}    
         {{ form }}
