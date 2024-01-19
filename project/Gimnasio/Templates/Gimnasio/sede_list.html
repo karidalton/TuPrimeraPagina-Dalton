@@ -1,0 +1,27 @@
+{% extends 'Gimnasio/base.html' %}
+
+{% block contenido %}
+
+    <h1>Sedes</h1>
+    <table border="1">
+        <thead>
+            <th>Nombre</th>
+            <th>Dirección</th>
+        </thead>
+        <tbody>
+            {% for sede in sedes %}
+                <tr>
+                    <td>{{sede.nombre}}</td>
+                    <td>{{sede.domicilio}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        
+    </table>
+
+    <button><a href="{% url 'sede_form' %}">Nueva Sede</a></button>
+    <button><a href="{% url 'suscriptor_por_sede' %}">Miembros por sede</a></button>
+    <button><a href="{% url 'index' %}">Volver a inicio</a></button>
+    
+{% endblock contenido %}
+

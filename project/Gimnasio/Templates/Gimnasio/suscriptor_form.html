@@ -1,0 +1,10 @@
+{% extends 'Gimnasio/base.html' %}
+
+{% block contenido %}
+    <form  method="post">
+        {% csrf_token %}    
+        {{ form }}
+        <button type="submit">Guardar</button>
+        <button><a href="{% url 'suscriptor_list' %}">Cancelar</a></button>
+    </form>
+{% endblock contenido %}

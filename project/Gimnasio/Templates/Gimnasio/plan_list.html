@@ -1,0 +1,15 @@
+{% extends 'Gimnasio/base.html' %}
+
+{% block contenido %}
+
+    <h1>Lista de planes</h1>
+    {% for plan in planes %}
+        <ul>
+            <li>
+                {{plan.nombre}}
+                {{plan.precio}}
+            </li>
+        </ul>
+    {% endfor %}
+    <button><a href="{% url 'index' %}">Volver a inicio</a></button>
+{% endblock contenido %}

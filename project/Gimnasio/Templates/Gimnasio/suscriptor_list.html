@@ -1,0 +1,27 @@
+{% extends 'Gimnasio/base.html' %}
+
+{% block contenido %}
+
+    <h1>Miembros del Gimnasio</h1>
+    <table border="1">
+        <thead>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Fecha de alta</th>
+        </thead>
+        <tbody>
+            {% for suscriptor in suscriptores %}
+            <tr>
+                <td>{{suscriptor.nombre}}</td>
+                <td>{{suscriptor.apellido}}</td>
+                <td>{{suscriptor.email}}</td>
+                <td>{{suscriptor.alta}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button><a href="{% url 'suscriptor_form' %}">Nuevo suscriptor</a></button>
+    <button><a href="{% url 'index' %}">Volver a inicio</a></button>
+
+{% endblock contenido %}

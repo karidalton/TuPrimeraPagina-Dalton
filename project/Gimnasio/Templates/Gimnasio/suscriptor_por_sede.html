@@ -1,0 +1,23 @@
+{% extends 'Gimnasio/base.html' %}
+
+{% block contenido %}
+
+    <h1>Miembros por Sede</h1>
+    <table border="1">
+        <thead>
+            <th>Nombre y Apellido</th>
+            <th>Sede</th>
+        </thead>
+        <tbody>
+            {% for suscriptor in suscriptores %}
+            <tr>
+                <td>{{suscriptor.cliente}}</td>
+                <td>{{suscriptor.sede}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button><a href="{% url 'asignacion_sede_form' %}">Asignar miembro</a></button>
+    <button><a href="{% url 'index' %}">Volver a inicio</a></button>
+
+{% endblock contenido %}

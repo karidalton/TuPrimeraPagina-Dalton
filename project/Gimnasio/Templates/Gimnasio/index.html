@@ -1,0 +1,12 @@
+{% extends 'Gimnasio/base.html' %}
+
+{% block contenido %}
+
+    <h1>Bienvenido</h1>
+
+    <button><a href="{% url 'sede_list' %}">Ver Sedes</a></button>
+    <button><a href="{% url 'plan_list' %}">Ver Planes</a></button>
+    <button><a href="{% url 'suscriptor_list' %}">Ver Suscriptores</a></button>
+
+
+{% endblock contenido %}
